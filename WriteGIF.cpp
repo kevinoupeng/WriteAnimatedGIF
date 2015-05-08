@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
-#include <WriteGIF.h>
+#include "WriteGIF.h"
 
 /*
 header
@@ -555,7 +555,7 @@ void write(GIF* gif, const char* filename)
 	
 	if(! filename){
 		static char defaultFilename[256] = "test.gif";
-		snprintf(defaultFilename, 256, "%d.gif", int(time(0)));
+		sprintf(defaultFilename, "%d.gif", int(time(0)));
 		filename = defaultFilename;
 	}
 	FILE* f = fopen(filename, "wb");

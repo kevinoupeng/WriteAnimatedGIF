@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <WriteGIF.h>
+#include "WriteGIF.h"
 
 void setPixel(unsigned char* rgb, int r, int g, int b)
 {
